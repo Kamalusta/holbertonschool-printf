@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print_char - printing for percent
- * @lst: unused argument
+ * print_percent - printing for percent
+ * @lst: Unused argument
  *
  * Return: number of printed characters
  */
