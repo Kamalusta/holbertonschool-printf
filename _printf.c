@@ -22,14 +22,6 @@ int i = 0, j = 0, count = 0;
 format_t fuct[] = {
 {'c', print_char},
 {'s', print_string},
-{'%', print_percent},
-{'d', print_int},
-{'i', print_int},
-{'u', print_unsigned},
-{'o', print_octal},
-{'x', print_hex_lower},
-{'X', print_hex_upper},
-{'p', print_pointer},
 {'\0', NULL}
 };
 va_list ls;
