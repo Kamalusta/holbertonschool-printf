@@ -29,7 +29,7 @@ return (write(1, w, strlen(w)));
  */
 int _printf(const char *format, ...)
 {
-int i = 0, j = 0;
+int i = 0, j = 0, count = 0;
 format_t fuct[] = {
 {'c', print_char},
 {'s', print_string},
@@ -49,6 +49,7 @@ j++;
 }
 j = 0;
 i++;
+count++;
 }
 else
 write(1, &format[i], 1);
