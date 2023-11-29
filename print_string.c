@@ -7,13 +7,13 @@
  */
 int print_string(va_list lst)
 {
-char* w = va_arg(lst, char*);
+char *w = va_arg(lst, char*);
 if (!w)
 {
-char* sw = "(null)";
-write(1,sw,strlen(sw));
+char *sw = "(null)";
+write(1, sw, strlen(sw));
 return (6);
 }
 else
-return (write(1,w,strlen(w)));
+return (write(1, w, strlen(w)));
 }
