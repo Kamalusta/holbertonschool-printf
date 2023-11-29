@@ -30,6 +30,7 @@ format_t fuct[] = {
 {'x', print_hex_lower},
 {'X', print_hex_upper},
 {'p', print_pointer},
+{'r', print_unknown},
 {'\0', NULL}
 };
 va_list ls;
