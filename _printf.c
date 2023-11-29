@@ -13,13 +13,13 @@ format_t fuct[] = {{'c', print_char}, {'s', print_string}, {'%', print_percent}
 {'o', print_octal}, {'x', print_hex_lower}, {'X', print_hex_upper},
 {'p', print_pointer}, {'r', print_unknown}, {'\0', NULL}};
 va_list ls;
+if (!format || (strlen(format) == 1 && format[i] == '%'))
+return (-1);
 va_start(ls, format);
 while (format[i])
 {
 if (format[i] == '%')
 {
-if (strlen(format) == 1)
-return (-1);
 while (fuct[j].type)
 {
 if (format[i + 1] == fuct[j].type)
