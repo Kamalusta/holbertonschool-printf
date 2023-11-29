@@ -22,6 +22,10 @@ int i = 0, j = 0, count = 0;
 format_t fuct[] = {
 {'c', print_char},
 {'s', print_string},
+{'%', print_percent},
+{'d', print_int},
+{'i', print_int},
+{'u', print_unsigned},
 {'\0', NULL}
 };
 va_list ls;
