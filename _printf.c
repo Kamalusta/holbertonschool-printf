@@ -33,8 +33,6 @@ int i = 0, j = 0;
 format_t fuct[] = {
 {'c', print_char},
 {'s', print_string},
-{'d', print_int},
-{'i', print_int},
 {'\0', NULL}
 };
 va_list ls;
