@@ -46,10 +46,15 @@ while (format[i])
 {
 if (format[i] == '%')
 {
+if(strlen(format) == 1)
+return (-1);
 while (fuct[j].type)
 {
 if (format[i + 1] == fuct[j].type)
+{
 count_fn += fuct[j].f(ls);
+break;
+}
 j++;
 }
 if (!fuct[j].type)
