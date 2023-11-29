@@ -12,6 +12,10 @@ int print_char(va_list);
 int print_percent(va_list);
 int print_int(va_list);
 int print_unsigned(va_list);
+int print_octal(va_list);
+int print_hex_lower(va_list);
+int print_hex_upper(va_list);
+int print_pointer(va_list);
 /**
  * struct _format - struct for printing
  * @type: type of data
