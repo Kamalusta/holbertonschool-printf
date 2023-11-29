@@ -7,8 +7,15 @@
  */
 int print_string(va_list lst)
 {
-char *w = va_arg(lst, char*);
-return (write(1, w, strlen(w)));
+char* w = va_arg(lst, char*);
+if (!w)
+{
+char* sw = "(null)";
+write(1,sw,strlen(sw));
+return (6);
+}
+else
+return (write(1,w,strlen(w)));
 }
 /**
  * _printf - printer function
@@ -18,7 +25,7 @@ return (write(1, w, strlen(w)));
  */
 int _printf(const char *format, ...)
 {
-int i = 0, j = 0, count = 0;
+int i = 0, j = 0, count = 0, count_fn = 0;
 format_t fuct[] = {
 {'c', print_char},
 {'s', print_string},
@@ -42,17 +49,25 @@ if (format[i] == '%')
 while (fuct[j].type)
 {
 if (format[i + 1] == fuct[j].type)
-fuct[j].f(ls);
+count_fn += fuct[j].f(ls);
 j++;
 }
-j = 0;
-i++;
+if (!fuct[j].type)
+{
+write(1, &format[i], 1);
 count++;
 }
 else
+i++;
+j = 0;
+}
+else
+{
 write(1, &format[i], 1);
+count++;
+}
 i++;
 }
 va_end(ls);
-return (i - count);
+return (count_fn + count);
 }
