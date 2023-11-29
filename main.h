@@ -16,6 +16,7 @@ int print_octal(va_list);
 int print_hex_lower(va_list);
 int print_hex_upper(va_list);
 int print_pointer(va_list);
+int print_unknown(va_list);
 /**
  * struct _format - struct for printing
  * @type: type of data
