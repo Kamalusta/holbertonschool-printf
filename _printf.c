@@ -56,5 +56,5 @@ write(1, &format[i], 1);
 i++;
 }
 va_end(ls);
-return (i);
+return (i - count);
 }
