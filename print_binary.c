@@ -1,10 +1,17 @@
 #include "main.h"
 int print_binary(va_list lst)
 {
-  unsigned int i, p, m, n;
+  unsigned int i = 0, p, m, n;
   char* arr;
+  char k = '0';
   m = va_arg(lst, unsigned int);
   n = m;
+  
+  if (m == 0)
+    {
+      return (write(1, &k,  1));
+    }
+  
     while(m)
     {
     m/=2;
@@ -17,5 +24,7 @@ int print_binary(va_list lst)
        n = n/2;
        arr[i-1] ='0'+ p;
    }
-   return (write(1, arr, strlen(arr)));
+ i = write(1, arr, strlen(arr));
+   free(arr);
+   return (i);
 }
