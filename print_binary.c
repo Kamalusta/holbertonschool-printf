@@ -18,6 +18,8 @@ int print_binary(va_list lst)
     i++;
     }
     arr=malloc(i);
+    if (arr == NULL)
+      return (0);
    for (;n>0;i--)
    {
        p = n%2;
