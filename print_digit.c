@@ -1,4 +1,5 @@
-#include "main.h"
+
+0;10;1c#include "main.h"
 /**
  * print_digitt - printing for integer
  * @lst: Integer to be printed
@@ -8,9 +9,14 @@
 
 int print_digit(va_list lst)
 {
-  int k,len,j=0,pint,digit;
+ long int k,len,j=0,pint,digit;
     char *arr;
-    int num = va_arg(lst, int);
+   long int num = va_arg(lst, int);
+    if (num ==0)
+      {
+	write(1,"0",1);
+    return (1);
+      }
     if (num<0)
     pint = -10 * num;
     else
