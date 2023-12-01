@@ -1,0 +1,84 @@
+.TH _PRINTF 3 "November 2023" "Holberton School"
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+.B #include "main.h"
+.br
+.I int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The \fB_printf\fR function produces output according to a format. The function supports the following conversion specifiers:
+
+.TP
+\fB%c\fR
+Prints a character.
+
+.TP
+\fB%s\fR
+Prints a string.
+
+.TP
+\fB%\fR
+Prints a percent sign.
+
+.TP
+\fB%d, %i\fR
+Prints an integer.
+
+.TP
+\fBu\fR
+Prints an unsigned integer.
+
+.TP
+\fBo\fR
+Prints an unsigned octal.
+
+.TP
+\fBx\fR, \fBX\fR
+Prints an unsigned hexadecimal in lowercase (\fBx\fR) or uppercase (\fBX\fR).
+
+.TP
+\fBp\fR
+Prints a pointer.
+
+.TP
+\fBr\fR
+Prints an unknown specifier.
+
+.SH RETURN VALUE
+The \fB_printf\fR function returns the number of characters printed (excluding the null byte used to end output to strings).
+
+.SH EXAMPLES
+The following example demonstrates the usage of \fB_printf\fR:
+
+.B
+.sp
+\fB#include <limits.h>\fR
+\fB#include <stdio.h>\fR
+\fB#include "main.h"\fR
+.sp
+\fBint main(void)\fR
+\fB{\fR
+\fB    int len;\fR
+\fB    len = _printf("Hello, %s! The number is %d.\n", "world", 42);\fR
+\fB    return (0);\fR
+\fB}\fR
+
+.SH SEE ALSO
+.BR printf (3)
+
+.SH AUTHOR
+This manual page was written by Vasif Orujzada and Kamal Huseynli.
+
+.SH BUGS
+No known bugs.
+
+.SH NOTES
+This man page follows the conventions of the Holberton School.
+
+.SH COPYRIGHT
+Copyright © 2023, Holberton School.
+
+.SH DISCLAIMER
+This manual page is provided "as is" without any warranty.
