@@ -24,6 +24,8 @@ int print_digit(va_list lst)
     pint=pint/10;
     len = k;
     arr = malloc(len);
+    if (!arr)
+      return(0);
     while(k>j)
     {
       if(num<0)
