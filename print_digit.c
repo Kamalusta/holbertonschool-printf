@@ -1,5 +1,4 @@
-
-0;10;1c#include "main.h"
+#include "main.h"
 /**
  * print_digitt - printing for integer
  * @lst: Integer to be printed
