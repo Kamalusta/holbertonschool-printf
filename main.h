@@ -10,7 +10,7 @@ int _printf(const char *format, ...);
 int print_string(va_list);
 int print_char(va_list);
 int print_percent(va_list);
-int print_int(va_list);
+int print_digit(va_list);
 int print_unsigned(va_list);
 int print_octal(va_list);
 int print_hex_lower(va_list);
